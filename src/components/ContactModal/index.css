@@ -1,0 +1,70 @@
+.contact-message {
+    background-color: #e2f4f1; /* Light green background */
+    color: #333; /* Text color */
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    padding: 15px 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .contact-message p {
+    /* margin-left: 10px; */
+    font-size: 30px;
+    display: inline-block;
+    font-weight: 500;
+  }
+  
+  .contact-message strong {
+    color: #007bff; /* Blue color for labels */
+  }
+  
+  .car-image {
+     
+    /* width: auto;
+    border-radius: 5px; 
+    margin-right: 15px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  }
+
+  .car-icon-contact{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .navbar {
+    margin-top: 80px;
+  }
+  @media screen and (max-width: 768px) {
+    .contact-message {
+      font-size: 14px;
+      padding: 10px;
+      flex-direction: column;
+      text-align: center;
+      width: 95%;
+    }
+  
+    .contact-message p {
+      font-size: 18px;
+    }
+  
+    .car-icon-contact {
+      width: 20px;
+      height: 20px;
+      margin-right: 0;
+      /* margin-bottom: 5px; */
+    }
+  
+    .navbar {
+      margin-top: 100px;
+    }
+  }
+  
