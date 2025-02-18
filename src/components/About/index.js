@@ -46,7 +46,7 @@ const AboutPage = () => {
 
         {/* Mission Section */}
         <section className="mission-section">
-          <motion.h2 className="section-title">Our Mission</motion.h2>
+          <motion.h2 className="section-title">Our Mission</motion.h2><motion.h2 className="section-title">kows</motion.h2>
           <p className="section-text">
             Our commitment is to change the way real estate is perceived, through innovation, transparency, and a focus on sustainability.
           </p>
