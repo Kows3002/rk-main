@@ -1,7 +1,6 @@
-/* Global Styles */
 .about-container {
   font-family: 'Poppins', sans-serif;
-  color: #333;
+  color: #fff;
   max-width: 1200px;
   margin: auto;
 }
@@ -9,21 +8,22 @@
 /* Hero Section */
 .hero-section {
   position: relative;
-  /*background: url('/images/aboutImage.jpg') center/cover no-repeat;*/
-  height: 400px;
+  height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  margin-top: 40px;
+  margin-top: 155px; /* Adds space above the image */
+  padding-top: 20px; /* You can tweak this for more control */
 }
+
 
 .hero-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-content {
@@ -34,98 +34,303 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  padding: 20px;
 }
 
 .hero-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
-}
-.icon{
-  align-items: center;
-  align-content: center;
-}
-/* Mission Section */
-.mission-section {
-  padding: 60px;
-  text-align: center;
+  font-size: 1.4rem;
+  font-style: italic;
 }
 
-.section-title {
-  font-size: 2rem;
-  font-weight: bold;
+
+
+
+
+/* Mission Section */
+.mission-section {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #b8860b, #daa520);  /* DarkGoldenRod to Rich Gold */
   text-align: center;
-  color: black;
+  width: 100%;
+  margin-top: 30px;
 }
-.section-text {
-  max-width: 800px;
-  margin:auto;
-  font-size: 1.1rem;
-  color: #555;
+
+/* Wrapper for the grid background */
+.mission-bg-wrapper {
+  width: 100%;
+  background: linear-gradient(135deg, #b8860b, #daa520);
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  height: 100%;
 }
 
 .mission-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mission Card */
+.mission-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 80%;  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #daa520;  /* Rich Gold Border */
+}
+
+.mission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Center Icon */
+.icon-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.mission-card {
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 250px;
-}
-
-/* Exclusive Properties Section */
-.exclusive-section {
-  display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 50px;
-  flex-wrap: wrap;
-  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.icon {
+  font-size: 3.5rem;  
+  color: #b8860b;  /* DarkGoldenRod for contrast */
+}
+
+/* Improved Title Size & Color */
+.mission-card h3 {
+  font-size: 1.8rem;  
+  font-weight: 700;
+  color: #333;  /* Charcoal Gray */
+  margin-bottom: 10px;
+}
+
+/* Improved Paragraph with New Font Style */
+.mission-card p {
+  font-size: 1.2rem;  
+  font-family: 'Playfair Display', serif;  /* Elegant Font */
+  color: #444;  /* Softer Black for readability */
+  line-height: 1.6;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;  
+  font-weight: bold;
+  color: #333;  /* Charcoal Gray */
+}
+
+/* Section Paragraph */
+.section-text {
+  font-size: 1.3rem;  
+  font-family: 'Playfair Display', serif;  /* Elegant Font */
+  color: #444;  
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .mission-cards {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .mission-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .mission-bg-wrapper {
+    padding: 20px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-text {
+    font-size: 1.1rem;
+  }
+
+  .mission-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .mission-card p {
+    font-size: 1.1rem;
+  }
+}
+
+.exclusive-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 80px 10%;
+  background-color: #f7f7f7; /* Light grey background for the section */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  
+}
+
+.exclusive-content {
+  padding: 40px;
+  background-color: #fff; /* White background for content */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for content */
+  color: #333; /* Dark text for contrast */
+  text-align: left;
+  margin-right: 30px;
+}
+
+.exclusive-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #b8860b; /* Dark Goldenrod color for the title */
+  margin-bottom: 20px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.exclusive-description {
+  font-size: 1.2rem;
+  color: #555; /* Medium grey for description text */
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.exclusive-stats {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item i {
+  font-size: 2.5rem;
+  color: #b8860b; /* Dark Goldenrod for icons */
+  margin-bottom: 10px;
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  color: #333; /* Dark grey for stat number */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1rem;
+  color: #888; /* Lighter grey for stat description */
+  font-weight: 500;
+}
+
+.exclusive-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .exclusive-image img {
   width: 100%;
-  max-width: 500px;
+  max-width: 650px;
   border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow around the image */
 }
 
-.exclusive-stats {
+@media (max-width: 1024px) {
+  .exclusive-section {
+    grid-template-columns: 1fr;
+    padding: 50px 5%;
+  }
+
+  .exclusive-content {
+    text-align: center;
+  }
+
+  .exclusive-stats {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .exclusive-image img {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+.agents-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
   text-align: center;
 }
 
-.exclusive-stats h3 {
-  font-size: 2rem;
-  color: #ff6600;
-  margin: 10px 0;
+.section-title {
+  font-size: 35px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.exclusive-stats p {
-  font-size: 1rem;
-  color: #777;
+.section-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Trusted Agents */
 .agents-list {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .agent-card {
   text-align: center;
   width: 150px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.agent-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .agent-card img {
@@ -143,8 +348,32 @@
 
 .agent-card p {
   font-size: 14px;
-  margin-top: 5px;
+  margin-top: 10px;
+  color: #333;
 }
+
+.cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cta-button {
+  background-color: #ff9800;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e68900;
+}
+
+
 
 /* Call To Action */
 .cta-section {
